@@ -1,21 +1,14 @@
-# vueapple
+# 📛 Vue.js 仿苹果官网 
 
-> A Vue.js project
+> This is a beginning project of vue.js for imitating the official Apple website
+> 最近开始学的Vue.js 这是一个我仿的PC端的Apple官网
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+### Day 1(2018.1.24)
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+*   利用EasyMock建立好 Home 页面的网址图片数据和 Mac 页面图片的数据
+    1.  Home 页面 
+        * https://www.easy-mock.com/mock/5a67ef8cbdf9f5437bb4979a/Data/homedata
+    2.  Mac 页面
+        * https://www.easy-mock.com/mock/5a67ef8cbdf9f5437bb4979a/Data/macData
+*   将所需要的图标去 iconfont 下载好 
+```
