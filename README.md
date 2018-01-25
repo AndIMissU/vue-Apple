@@ -1,14 +1,16 @@
-# 📛 Vue.js 仿苹果官网 
+### 📛 Vue.js 仿苹果官网 
 
-1. This is a beginning project of vue.js for imitating the official Apple website
-2. 最近开始学的Vue.js 这是一个我仿的PC端的Apple官网
+1. This is a `beginning` project of `vue.js` for imitating the official `Apple website`
+2. 最近开始学的`Vue.js`这是一个我仿的`PC端`的`Apple官网`
 
 ### Day 1     (2018.1.24)
 ```
-*   利用EasyMock建立好 Home 页面的网址图片数据和 Mac 页面图片的数据
-    1.  Home 页面 
-        * https://www.easy-mock.com/mock/5a67ef8cbdf9f5437bb4979a/Data/homedata
-    2.  Mac 页面
-        * https://www.easy-mock.com/mock/5a67ef8cbdf9f5437bb4979a/Data/macData
-*   将所需要的图标去 iconfont 下载好 
+1. 利用`EasyMock`建立好`Home页面`的网址图片数据和`Mac页面`图片的数据
+    *  Home 页面 : [HomeData的图片数据和一些顶部的headerbar的图标](https://www.easy-mock.com/mock/5a67ef8cbdf9f5437bb4979a/Data/homedata/)
+    *  Mac 页面 : [MacData的图片数据和一些介绍的数据](https://www.easy-mock.com/mock/5a67ef8cbdf9f5437bb4979a/Data/macData)
+2. 在`iconfont`上下载好所需要的`图标`
 ```
+
+### Day 2     (2018.1.25)
+
+> 今天没做很多事，有些烦心事，就做了一个顶部的`headbar的基础样式`，没写很多，脑子想很多，想其他事情去了，没心情写代码
