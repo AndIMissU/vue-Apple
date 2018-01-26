@@ -1,7 +1,7 @@
 ### 📛 Vue.js 仿苹果官网 
 
-1. This is a `beginning` project of `vue.js` for imitating the official `Apple website`
-2. 最近开始学的`Vue.js`这是一个我仿的`PC端`的`Apple官网`
+*  This is a `beginning` project of `vue.js` for imitating the official `Apple website`
+*  最近开始学的`Vue.js`这是一个我仿的`PC端`的`Apple官网`
 
 ### Day 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2018.1.24)
 
@@ -17,3 +17,9 @@
 
 > 今天没做很多事，有些烦心事，就做了一个顶部的`headbar的基础样式`，没写很多，脑子想很多，想其他事情去了，写代码的心情很复杂
 
+### Day 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2018.1.26)
+
+1. router编写顶部的headerbar完成页面的跳转
+    *  发现的router的tag属性默认是 `<a>`这个标签，这样就可以按照自己需要更改router-link的样式
+2. 利用`axios`获取我再EasyMock上提前搭建好的数据，赋值给首页所需要的数组
+3. 基本完成了首页的页面制作
