@@ -99,25 +99,28 @@
   
 </template>
 <script>
-import axios from "axios"
-import footerInfo from "@/components/common/FooterInfo"
+import axios from "axios";
+import footerInfo from "@/components/common/FooterInfo";
 export default {
-  data(){
+  data() {
     return {
       major: [],
       ads: []
-    }
+    };
   },
   created: function() {
-    axios.get("https://www.easy-mock.com/mock/5a67ef8cbdf9f5437bb4979a/Data/homedata")
-    .then( response => {
-      this.major = response.data.major;
-      this.ads = response.data.ads;
-      console.log(this.major);
-    })
-    .catch( error => {
-      alert('网络错误不能访问');
-    });
+    axios
+      .get(
+        "https://www.easy-mock.com/mock/5a67ef8cbdf9f5437bb4979a/Data/homedata"
+      )
+      .then(response => {
+        this.major = response.data.major;
+        this.ads = response.data.ads;
+        console.log(this.major);
+      })
+      .catch(error => {
+        alert("网络错误不能访问");
+      });
   },
   components: {
     footerInfo
@@ -132,9 +135,9 @@ export default {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.07143;
-  letter-spacing: -.005em;
-  font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
-  
+  letter-spacing: -0.005em;
+  font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 .subheadline {
   text-align: center;
@@ -142,11 +145,12 @@ export default {
   margin-bottom: 0;
   font-size: 23px;
   font-weight: 400;
-  letter-spacing: .008em;
+  letter-spacing: 0.008em;
   line-height: 1.14815;
-  font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-.major-0{
+.major-0 {
   cursor: pointer;
   width: 100%;
   height: 692px;
@@ -155,10 +159,10 @@ export default {
   position: relative;
   border-bottom: 12px solid #fff;
 }
-.major-0-wrapper{
+.major-0-wrapper {
   padding-top: 117px;
 }
-.major-0-img{
+.major-0-img {
   margin-top: 315px;
 }
 .iphoneX {
@@ -175,7 +179,7 @@ export default {
   position: relative;
   border-bottom: 12px solid #fff;
 }
-.major-1-wrapper{
+.major-1-wrapper {
   padding-top: 55px;
 }
 .iphone8 {
@@ -193,7 +197,7 @@ export default {
   position: relative;
   overflow: hidden;
 }
-.major-2-wrapper{
+.major-2-wrapper {
   padding-top: 55px;
 }
 .now {
@@ -224,7 +228,7 @@ export default {
   height: 592px;
   float: left;
   border: 6px solid #fff;
-  
+
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -257,10 +261,12 @@ export default {
   margin-bottom: 0;
   font-size: 19px;
   color: #fff;
-  font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
 }
-.ads-0-img, .ads-1-img {
+.ads-0-img,
+.ads-1-img {
   position: absolute;
   left: calc(50% - 631px);
   z-index: 1;
@@ -280,10 +286,10 @@ export default {
   height: 44px;
   bottom: 0;
 }
-.ads-2-title{
+.ads-2-title {
   height: 44px;
 }
-.ads-2-img{
+.ads-2-img {
   position: absolute;
   top: calc(50% - 73px);
   left: calc(50% - 255px);
@@ -321,7 +327,7 @@ export default {
   font-size: 40px;
   text-align: center;
 }
-.logo-4-image{
+.logo-4-image {
   width: 142px;
   height: 54px;
   text-align: center;
@@ -357,8 +363,8 @@ export default {
   color: #111;
   line-height: 44px;
 }
-.ads-5-img{
-  padding-top: 55px;;
+.ads-5-img {
+  padding-top: 55px;
   position: absolute;
   top: calc(50% - 81px);
   left: calc(50% - 66px);

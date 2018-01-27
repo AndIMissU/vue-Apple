@@ -5,9 +5,7 @@
   </div>
 </template>
 <script>
-export default {
-  
-}
+export default {};
 </script>
 <style scoped>
 .app {
@@ -15,7 +13,9 @@ export default {
   background: #fafafa;
 }
 .up {
-  font-family: "SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro",
+    "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
   padding-top: 40px;
   width: 980px;
   height: 274px;
