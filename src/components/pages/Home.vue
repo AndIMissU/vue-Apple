@@ -1,5 +1,6 @@
 <template>
   <div class="body">
+    <header-bar></header-bar>
     <div class="major">
       <div class="major-0">
         <div class="major-0-wrapper">
@@ -101,6 +102,7 @@
 <script>
 import axios from "axios";
 import footerInfo from "@/components/common/FooterInfo";
+import headerBar from "@/components/common/HeaderBar"
 export default {
   data() {
     return {
@@ -116,14 +118,14 @@ export default {
       .then(response => {
         this.major = response.data.major;
         this.ads = response.data.ads;
-        console.log(this.major);
       })
       .catch(error => {
         alert("网络错误不能访问");
       });
   },
   components: {
-    footerInfo
+    footerInfo,
+    headerBar
   }
 };
 </script>

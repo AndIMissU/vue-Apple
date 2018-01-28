@@ -39,7 +39,7 @@
               <i class="icon iconfont icon-bag-copy"></i>
             </router-link>
           </li>
-		</ul>
+		    </ul>
       </div>
     </div>
   </div>
