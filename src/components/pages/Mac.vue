@@ -173,26 +173,27 @@
         </div>
       </div>
     </div>
+    <tab-nav></tab-nav>
     <footer-info></footer-info>
   </div>
 </template>
 <script>
 import axios from "axios";
 import footerInfo from "@/components/common/FooterInfo";
+import tabNav from "@/components/common/TabNav"
 import headerBar from "@/components/common/HeaderBar";
 export default {
   data() {
     return {
       all: {},
       headbar: [],
-      machines: [],
-      inapp: [],
-      majorapp: []
+      machines: []
     };
   },
   components: {
     headerBar,
-    footerInfo
+    footerInfo,
+    tabNav
   },
   created: function() {
     axios
@@ -203,8 +204,6 @@ export default {
         this.all = response.data;
         this.headbar = response.data.headbar;
         this.machines = response.data.machines;
-        this.inapp = response.data.inapp;
-        this.majorapp = response.data.majorapp;
       })
       .catch(error => {
         alert("网络错误不能访问");
