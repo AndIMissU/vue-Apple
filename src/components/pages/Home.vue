@@ -110,7 +110,7 @@ export default {
       ads: []
     };
   },
-  created: function() {
+  mounted: function() {
     axios
       .get(
         "https://www.easy-mock.com/mock/5a67ef8cbdf9f5437bb4979a/Data/homedata"
