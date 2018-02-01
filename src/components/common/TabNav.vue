@@ -7,19 +7,40 @@
           <p class="app-title-subheadline">
             每台 Mac 都内置了众多激发创意、提升效率的 app。这些功能强大的工具能助你来探索、交流、高效工作。访问 
             <a class="app-title-a" href="#">Mac App Store</a>
+            ，更有成百上千款 app 等你发现。
           </p>
         </div>
       </div>
       <div class="app-wrapper">
-        <div class="app-nav">
-          <ul class="app-tablist">
-            <li :class="'app-tablist-tabitem-'+ index + ' app-tablist-tabitem'" v-for="(item, index) in inapp" :key="item.id">
-              <div class="app-item-content">
-                <img :src="item.img" class="app-item-img">
-                <span class="app-item-name">{{item.name}}</span>
-              </div>
-            </li>
-          </ul>
+        <div class="app-lists">
+          <div class="app-nav">
+            <ul class="app-tablist">
+              <li :class="'app-tablist-tabitem-'+ index + ' app-tablist-tabitem'" v-for="(item, index) in inapp" :key="item.id">
+                <div class="app-item-content">
+                  <a class="app-item-content-href" :href="'#content-'+index">
+                    <img :src="item.img" class="app-item-img">
+                    <span class="app-item-name">{{item.name}}</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="app-galleys">
+            <ul class="app-galley">
+              <li class="app-galley-item" v-for="(item,index) in inapp" :key="item.id" :id="'content-'+index">
+                <div class="galley-item-img">
+                  <img :src="item.info.outimg" class="galley-item-outimg">
+                  <img :src="item.info.inimg" class="galley-item-inimg">
+                </div>
+                <div class="galley-item-info">
+                  <div class="galley-item-infocontent">
+                    <p class="galley-item-title">{{item.name}}</p>
+                    <p class="galley-item-description">{{item.info.description}}</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -65,7 +86,7 @@ export default {
   margin: auto;
   background: #fafafa;
   width: 1350px;
-  height: 744px;
+  height: 976px;
   padding-bottom: 108px;
 }
 .app-title {
@@ -115,11 +136,16 @@ export default {
   height: 852px;
   padding-bottom: 108px;
 }
+.app-lists {
+  width: 980px;
+  margin: auto;
+}
 .app-nav {
   width: 980px;
   height: 164px;
   margin: auto;
   margin-top: 39px;
+  margin-bottom: 50px;
 }
 .app-tablist {
   list-style: none;
@@ -154,6 +180,83 @@ export default {
 .app-item-content {
   padding: 11px 0;
 }
+.app-item-content-href {
+  text-decoration: none;
+}
+.app-item-content-href:hover .app-item-name {
+  color: #0070c9;
+}
+.app-galley {
+  width: 100%;
+  display: block;
+  text-align: left;
+  list-style: none;
+}
+.app-galley-item {
+  display: none;
+}
+.app-galley-item:first-child {
+  /* display: block; */
+}
+.galley-item-img {
+  width: 66.66667%;
+  z-index: 1;
+  float: left;
+  box-sizing: border-box;
+}
+.galley-item-info {
+  display: block;
+  width: 33.33333%;
+  height: 100%;
+  float: left;
+}
+.galley-item-infocontent {
+  margin-top: 60%;
+  transform: translateY(-50%);
+}
+.galley-item-title {
+  font-size: 29px;
+  line-height: 1.125;
+  font-weight: 600;
+  letter-spacing: 0.004em;
+  font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: #111;
+}
+.galley-item-description {
+  margin-top: 12px;
+  font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 1.67059;
+  font-weight: 350;
+  color: #333;
+}
+.galley-item-img {
+  position: relative;
+}
+.galley-item-outimg {
+  margin-top: 5px;
+  margin-left: 0px;
+
+}
+.galley-item-inimg {
+  position: absolute;
+  top: 29px;
+  left: 24px;
+  z-index: 10;
+}
+#content-0:target,
+#content-1:target,
+#content-2:target,
+#content-3:target,
+#content-4:target,
+#content-5:target,
+#content-6:target
+ {
+  display: block;
+}
+
 </style>
 
 
