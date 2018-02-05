@@ -16,18 +16,21 @@
           <div class="app-nav">
             <ul class="app-tablist">
               <li :class="'app-tablist-tabitem-'+ index + ' app-tablist-tabitem'" v-for="(item, index) in inapp" :key="item.id">
+                <label :for="'li-'+index">
                 <div class="app-item-content">
-                  <a class="app-item-content-href" :href="'#content-'+index">
-                    <img :src="item.img" class="app-item-img">
-                    <span class="app-item-name">{{item.name}}</span>
-                  </a>
+                    <a class="app-item-content-href">
+                      <img :src="item.img" class="app-item-img">
+                      <span class="app-item-name">{{item.name}}</span>
+                    </a>
                 </div>
+                </label>
+                <input type="radio" :id="'li-'+index" :class="'nav-'+index" name="demo" :model="index">
               </li>
             </ul>
           </div>
           <div class="app-galleys">
             <ul class="app-galley">
-              <li class="app-galley-item" v-for="(item,index) in inapp" :key="item.id" :id="'content-'+index">
+              <li :class="'app-galley-item galley-item-'+index" v-for="(item,index) in inapp" :key="item.id" :id="'content-'+index">
                 <div class="galley-item-img">
                   <img :src="item.info.outimg" class="galley-item-outimg">
                   <img :src="item.info.inimg" class="galley-item-inimg">
@@ -52,7 +55,8 @@ export default {
   data() {
     return {
       inapp: [],
-      majorapp: []
+      majorapp: [],
+      picked: ""
     };
   },
 
@@ -192,12 +196,6 @@ export default {
   text-align: left;
   list-style: none;
 }
-.app-galley-item {
-  display: none;
-}
-.app-galley-item:first-child {
-  /* display: block; */
-}
 .galley-item-img {
   width: 66.66667%;
   z-index: 1;
@@ -238,7 +236,6 @@ export default {
 .galley-item-outimg {
   margin-top: 5px;
   margin-left: 0px;
-
 }
 .galley-item-inimg {
   position: absolute;
@@ -246,17 +243,24 @@ export default {
   left: 24px;
   z-index: 10;
 }
-#content-0:target,
-#content-1:target,
-#content-2:target,
-#content-3:target,
-#content-4:target,
-#content-5:target,
-#content-6:target
- {
-  display: block;
+input[type="radio"] {
+  /* display: none; */
+}
+li label {
+  cursor: pointer;
+}
+.app-galley-item {
+  display: none;
 }
 
+
+.galley-item-0 {
+  display: block;
+}
+.nav-1:checked~.app-item-content,
+.nav-2:checked~.app-item-content {
+  border-left: 1px solid black;
+}
 </style>
 
 
