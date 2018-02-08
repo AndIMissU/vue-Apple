@@ -36,6 +36,9 @@
                   <div class="galley-item-infocontent">
                     <p class="galley-item-title">{{item.name}}</p>
                     <p class="galley-item-description">{{item.info.description}}</p>
+                    <div class="product-more">
+                      <div class="more-product-cta macinfo-cta">进一步了解</div>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -82,6 +85,9 @@
                   <div class="galley-item-infocontent-2">
                     <p class="galley-item-title">{{item.name}}</p>
                     <p class="galley-item-description">{{item.info.description}}</p>
+                    <div class="product-more">
+                      <div class="more-product-cta macinfo-cta">进一步了解</div>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -131,7 +137,7 @@ export default {
         }
       }
 
-      var divs = document.getElementsByClassName("app-galley-item");
+      var divs = document.getElementsByClassName("inapp-galley-item");
       for (var i = 0; i < divs.length; i++) {
         var divv = divs[i];
 
@@ -371,20 +377,53 @@ export default {
   left: 73px;
   z-index: 10;
 }
-.app-galley-item {
+.inapp-galley-item {
   display: none;
 }
-.galley-item-0 {
+.majorapp-galley-item{
+  display: none;
+}
+.galley-item-0,.galley-item-0{
   display: block;
 }
-#inapp-item-0 {
-  border-bottom: 1px solid #666;
-}
-#majorapp-item-0 {
+#inapp-item-0, #majorapp-item-0 {
   border-bottom: 1px solid #666;
 }
 .app-content:last-child {
   margin-top: 50px;
+}
+.product-more {
+  margin-top: 19px;
+  display: inline-block;
+  color: #0070c9;
+}
+.more-product-cta {
+  margin: 0 10px;
+  font-size: 18px;
+  line-height: 1.38105;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+  position: relative;
+  display: inline-block;
+  margin-right: 25px;
+}
+/* 购买后面的伪元素 */
+.more-product-cta::after {
+  content: "";
+  padding-left: 0.4em;
+  top: 7px;
+  height: 0.4em;
+  margin-left: 5px;
+  border-top: 0.083em solid #0070c9;
+  border-right: 0.083em solid #0070c9;
+  transform: rotate(45deg);
+  position: absolute;
+}
+.macinfo-cta {
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 16px;
+  top: -5px;
 }
 </style>
 

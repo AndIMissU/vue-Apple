@@ -174,13 +174,39 @@
       </div>
     </div>
     <tab-nav></tab-nav>
+    <div class="education">
+      <div class="education-content">
+        <img :src="all.educationapp.img" class="education-img">
+        <div class="education-info">
+          <h3 class="education-title">{{all.educationapp.headline}}</h3>
+          <p class="education-title-subheadline">{{all.educationapp.subheadline}}</p>
+          <span class="education-href">
+            <a class="more">{{all.educationapp.firsthref}}</a>
+            <a class="more">{{all.educationapp.secondhref}}</a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="business">
+      <div class="business-content">
+        <img :src="all.businessapp.img" class="business-img">
+        <div class="business-info">
+          <h3 class="business-title">{{all.businessapp.headline}}</h3>
+          <p class="business-title-subheadline">{{all.businessapp.subheadline}}</p>
+          <span class="business-href">
+            <a class="more">{{all.businessapp.firsthref}}</a>
+            <a class="more">{{all.businessapp.secondhref}}</a>
+          </span>
+        </div>
+      </div>
+    </div>
     <footer-info></footer-info>
   </div>
 </template>
 <script>
 import axios from "axios";
 import footerInfo from "@/components/common/FooterInfo";
-import tabNav from "@/components/common/TabNav"
+import tabNav from "@/components/common/TabNav";
 import headerBar from "@/components/common/HeaderBar";
 export default {
   data() {
@@ -701,5 +727,71 @@ export default {
   margin-left: 0;
   font-size: 15px;
   top: -5px;
+}
+/* education 教育应用的样式 */
+.education, .business {
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 110px;
+}
+.education-content, .business-content {
+  margin: auto;
+  width: 1350px;
+}
+.education-info, .business-info {
+  text-align: center;
+}
+.education-img, .business-img {
+  margin-bottom: 50px;
+}
+.education-title,.business-title {
+  margin-top: 0;
+  margin-bottom: 2px;
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0em;
+  font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.education-title-subheadline, .business-title-subheadline{
+  margin-top: 1.5em;
+  font-size: 19px;
+  line-height: 1.38105;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+  color: #333;
+  margin-bottom: 1.3em;
+}
+.education-href,.business-href {
+  color: #0070c9;
+  font-size: 19px;
+  line-height: 1.38105;
+  font-weight: 350;
+  letter-spacing: 0.011em;
+  position: relative;
+  margin-left: -40px;
+}
+.more:last-child {
+  margin-left: 30px;
+}
+.more:hover {
+  border-bottom: 2px solid #0070c9;
+}
+.more:after {
+  content: "";
+  padding-left: 0.4em;
+  top: 8px;
+  height: 0.4em;
+  margin-left: 4px;
+  border-top: 0.083em solid #0070c9;
+  border-right: 0.083em solid #0070c9;
+  transform: rotate(45deg);
+  position: absolute;
+}
+/* business 商务应用*/
+.business {
+  width: 100%;
+  padding-bottom: 110px;
 }
 </style>
