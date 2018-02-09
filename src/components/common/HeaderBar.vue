@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-on:click="showBag">
     <div class="adcontent">
       <div class="ad">&lt; 广告 &gt;</div>
     </div>
@@ -34,20 +34,40 @@
               <i class="icon iconfont icon-fangdajing"></i>
             </router-link>
           </li>
-          <li class="header-item head-bag">
+          <li class="header-item head-bag" >
             <router-link to="">
               <i class="icon iconfont icon-bag-copy"></i>
             </router-link>
           </li>
 		    </ul>
+        
       </div>
+    </div>
+    <div class="bagview" id="bag">
+
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  methods: {
+    showBag(v) {
+      console.log(v);
+      var bag = document.getElementById("bag");
+      if(v.target.className == "icon iconfont icon-bag-copy") {
+        bag.style.display = "block";
+      } else {
+        bag.style.display = "none";
+      }
+    }
+  }
+};
 </script>
 <style>
+* {
+  margin: 0;
+  padding: 0;
+}
 .adcontent {
   width: 100%;
   height: 40px;
@@ -142,6 +162,35 @@ export default {};
 }
 .icon-bag-copy {
   font-size: 16px;
+}
+/* 购物袋的样式 */
+.bagview {
+  width: 288px;
+  height: 309px;
+  box-sizing: content-box;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+  background: white;
+  opacity: 1;
+  z-index: 9;
+  position: absolute;
+  margin-left: 1060px;
+  margin-top: 4px;
+  display: none;
+}
+.bagview::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-top: 1px solid #d6d6d6;
+  border-left: 1px solid #d6d6d6;
+  opacity: 1;
+  z-index: 9;
+  transform: rotate(45deg);
+  margin-left: 135px;
+  margin-top: -7px;
 }
 </style>
 
