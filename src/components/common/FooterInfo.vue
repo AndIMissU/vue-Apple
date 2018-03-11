@@ -144,6 +144,13 @@ export default {
   color: #888;
   margin-bottom: 6px;
 }
+.section-item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: black;
+  text-decoration-color: black;
+  
+}
 .section-second {
   padding-top: 24px;
 }

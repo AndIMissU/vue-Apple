@@ -289,6 +289,9 @@ export default {
   position: relative;
   text-decoration: none;
 }
+.mac-item-link:hover {
+  color: #6bf;
+}
 .mac-item-img {
   height: 54px;
 }

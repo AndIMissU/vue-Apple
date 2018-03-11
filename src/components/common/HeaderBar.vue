@@ -24,7 +24,7 @@
             <router-link to="">Watch</router-link>
           </li>
           <li class="header-item head-music">
-            <router-link to="">Music</router-link>
+            <router-link to="/music">Music</router-link>
           </li>
           <li class="header-item head-support">
             <router-link to="">技术支持</router-link>
@@ -44,7 +44,28 @@
       </div>
     </div>
     <div class="bagview" id="bag">
-
+      <div class="bag-content">
+        <p class="bag-message-empty">你的购物袋是空的</p>
+        <nav class="bagview-nav">
+          <ul class="bagview-nav-list">
+            <li class="bagview-nav-item">
+              <a href="" class="bagview-nav-link">购物袋</a>
+            </li>
+            <li class="bagview-nav-item">
+              <a href="" class="bagview-nav-link">收藏</a>
+            </li>
+            <li class="bagview-nav-item">
+              <a href="" class="bagview-nav-link">订单</a>
+            </li>
+            <li class="bagview-nav-item">
+              <a href="" class="bagview-nav-link">账户</a>
+            </li>
+            <li class="bagview-nav-item">
+              <a href="" class="bagview-nav-link">登录</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </template>
@@ -54,7 +75,7 @@ export default {
     showBag(v) {
       console.log(v);
       var bag = document.getElementById("bag");
-      if(v.target.className == "icon iconfont icon-bag-copy") {
+      if (v.target.className == "icon iconfont icon-bag-copy") {
         bag.style.display = "block";
       } else {
         bag.style.display = "none";
@@ -179,7 +200,7 @@ export default {
   display: none;
 }
 .bagview::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 12px;
   height: 12px;
@@ -191,6 +212,56 @@ export default {
   transform: rotate(45deg);
   margin-left: 135px;
   margin-top: -7px;
+}
+.bag-content {
+  margin: 0 auto;
+  min-height: 90px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  font-size: 13px;
+}
+.bag-message-empty {
+  color: #888;
+  padding: 35px 0;
+  margin: 0;
+  text-align: center;
+  letter-spacing: normal;
+  font-weight: 300;
+  font-family: inherit;
+}
+.bagview-nav {
+  margin-bottom: 2px;
+  width: 248px;
+  height: 220px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+.bagview-nav-list {
+  list-style: none;
+  border-top: 1px solid #e3e3e3;
+}
+.bagview-nav-item {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #e3e3e3;
+}
+.bagview-nav-item:first-child {
+  border-top-style: none;
+}
+.bagview-nav-link {
+  color: #0688f3;
+  display: block;
+  line-height: 43px;
+  padding: 0 30px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* font-weight: 300; */
+}
+.bagview-nav-link:hover {
+  text-decoration: underline;
 }
 </style>
 

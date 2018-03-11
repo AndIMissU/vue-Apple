@@ -115,7 +115,6 @@ export default {
         "https://www.easy-mock.com/mock/5a67ef8cbdf9f5437bb4979a/Data/appsData"
       )
       .then(response => {
-        console.log(response.data);
         this.inapp = response.data.inapp;
         this.majorapp = response.data.majorapp;
       })
