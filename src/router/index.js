@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/pages/Home'
 import Mac from '@/components/pages/Mac'
 import Music from '@/components/pages/Music'
+import Support from '@/components/pages/Support.vue'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/music',
       name: 'Music',
       component: Music
+    },
+    {
+      path: '/support',
+      name: 'Support',
+      component: Support
     }
   ]
 })

@@ -27,7 +27,7 @@
             <router-link to="/music">Music</router-link>
           </li>
           <li class="header-item head-support">
-            <router-link to="">技术支持</router-link>
+            <router-link to="/support">技术支持</router-link>
           </li>
           <li class="header-item head-search">
             <router-link to="">
